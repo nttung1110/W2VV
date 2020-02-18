@@ -9,7 +9,7 @@ features
 
 ## Convert features txt file to bin file format 
 
-Run txt2bin.py script with parameters(nDims: feature dimensions, inputTextfile:path to features txt file, isFileList, resultDir:
+Run txt2bin.py script with parameters(nDims: feature dimensions(1000 if using the given extracted script), inputTextfile:path to features txt file, isFileList, resultDir:
 specify path as following VisualSearch/${data_name}/${feature_name}:must be mean_resnext101_resnet152 to match with default model
 
 ### Remaining steps follow the same instructions specified in w2vv Readme file
