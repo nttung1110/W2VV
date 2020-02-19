@@ -1,5 +1,4 @@
-# Steps to plug-in own data for training/validating/testing using w2vv++ model
-## Usage
+# Usage
 
 Change environment variables to desired folder and create folder storing dataset(VisualSearch)
 ```
@@ -53,8 +52,9 @@ image_id_n#1 sentence_k
 ...
 ```
 
+## Training
 
-## Building vocabulary for caption file
+### Building vocabulary for caption file
 
 Run following code
 ```
