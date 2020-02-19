@@ -6,6 +6,7 @@ Change environment variables to desired folder and create folder storing dataset
 export HOME=/path/to/desired/folder
 cd $HOME
 mkdir VisualSearch
+git clone https://github.com/0902338471/W2VV-.git
 ```
 
 ## Extract features with ResNet152
