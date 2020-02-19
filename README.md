@@ -17,7 +17,7 @@ mkdir VisualSearch
 
 ## Convert features txt file to bin file format 
 
-Run txt2bin.py script with parameters(nDims: feature dimensions(1000 if using the given extracted script), inputTextfile:path to features txt file, isFileList, resultDir:
+Run txt2bin.py inside script with parameters(nDims: feature dimensions(1000 if using the given extracted script), inputTextfile:path to features txt file, isFileList, resultDir:
 
 ```
 # set resultDir as following
