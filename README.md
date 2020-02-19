@@ -1,11 +1,26 @@
 # Usage
 
+## Requirements
+* Ubuntu 16.04
+* cuda 10
+* python 2.7.12
+* conda
+* PyTorch 1.2.0
+* tensorboard 1.14.0
+* numpy 1.16.4
+* keras
+* tensorflow
+
+## Set up environment
 Change environment variables to desired folder and create folder storing dataset(VisualSearch)
 ```
 export HOME=/path/to/desired/folder
 cd $HOME
 mkdir VisualSearch
-git clone https://github.com/0902338471/W2VV-.git
+git clone https://github.com/0902338471/W2VV.git
+conda create -n W2VV python=2.7
+conda activate W2VV
+pip install -r ~/W2VV/w2vvpp/requirements.txt
 ```
 
 ## Extract features with ResNet152
@@ -58,6 +73,6 @@ image_id_n#1 sentence_k
 
 Run following code
 ```
-cd ~/W2VV-/w2vvpp
+cd ~/W2VV/w2vvpp
 ./do_build_vocab /VisualSearch/${data_name}/TextData/${data_name}.caption.txt
 ```
