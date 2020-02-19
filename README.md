@@ -38,13 +38,13 @@ ${your_data_name}
 │       ├── shape.txt
 │       └── id.txt
 └── TextData
-    └── ${subset_name}.caption.txt
+    └── ${your_data_name}.caption.txt
 
 ```
 
 * `FeatureData`: extracted image feature. 
-* `${subset_name}.txt`: all video IDs in the specific subset, one video ID per line.
-* `${subset_name}.caption.txt`: caption data. The file structure is as follows, in which the video and sent in the same line are relevant.
+* `feature.bin`: extracted features in binary format
+* `${your_data_name}.caption.txt`: caption data. The file structure is as follows, in which the image and sentence in the same line are relevant.
 ```
 image_id_1#1 sentence_1
 image_id_1#2 sentence_2
