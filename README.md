@@ -12,4 +12,10 @@ features
 Run txt2bin.py script with parameters(nDims: feature dimensions(1000 if using the given extracted script), inputTextfile:path to features txt file, isFileList, resultDir:
 specify path as following VisualSearch/${data_name}/${feature_name}:must be mean_resnext101_resnet152 to match with default model
 
+## Building vocabulary for caption file
+
+Saving image caption file with format: [image-name] [text_catption] inside folder VisualSearch/${data_name}/TextData 
+
+run ./do_build_vocab following the instructions of readme file inside w2vv folder
+
 ### Remaining steps follow the same instructions specified in w2vv Readme file
