@@ -10,24 +10,30 @@ git clone https://github.com/0902338471/W2VV-.git
 ```
 
 ## Extract features with ResNet152
+1.Run following code, replace ${your_data_name} variable by your own data name
+```
+mkdir ~/${your_data_name}   
+mkdir ~/VisualSearch/${your_data_name}/FeatureData/
+mkdir ~/VisualSearch/${your_data_name}/TextData/
+```
 
-1. Make sure ```~/VisualSearch/${data_name}/FeatureData/``` folder exists
-
-2. Create a folder dataset inside the repository.(storing all image and caption data inside this folder)
-3. Run resnext_152_extract.py script with parameters(--data_path $path/to/image/folder -- feature_path $output/features/to/txt/file/path
+2. Download all your dataset inside folder ```~/${your_data_name}```.(storing images and captions data in separate subfolder)
+3. Run following code, replace ```${image_folder}``` ```${output_features_name}``` with your folder image dataset and desired txt file storing extracted features respectively
+```
+python resnext_152_extract.py --data_path ${image_folder} -- feature_path ${output_features_name}.txt
+```
 
 ## Convert features txt file to bin file format 
-
-Run txt2bin.py inside script with parameters(nDims: feature dimensions(1000 if using the given extracted script), inputTextfile:path to features txt file, isFileList, resultDir:
-
+Run following code, replace ```${output_features_name}``` and ```${data_name}```
 ```
-# set resultDir as following
-resultDir = ~/VisualSearch/${data_name}/mean_resnext101_resnet152
+python txt2bin.py --nDims 1000, --inputTextfile ~/${output_features_name},
+--resultDir ~/VisualSearch/${data_name}/FeatureData/mean_resnext101_resnet152
 ```
 
 ## Building vocabulary for caption file
 
 Saving image caption file with format: [image-name] [text_catption] inside folder ```~/VisualSearch/${data_name}/TextData/${data_name}.caption.txt/```
+Run following code
 ```
 cd ~/W2VV-/w2vvpp
 ./do_build_vocab /VisualSearch/${data_name}/TextData/${data_name}.caption.txt
