@@ -74,5 +74,5 @@ image_id_n#1 sentence_k
 Run following code
 ```
 cd ~/W2VV/w2vvpp
-./do_build_vocab /VisualSearch/${data_name}/TextData/${data_name}.caption.txt
+./do_build_vocab.sh ${data_name}
 ```
