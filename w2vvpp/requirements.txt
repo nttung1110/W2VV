@@ -4,3 +4,4 @@ tensorboard==1.14.0
 torch==1.2.0
 keras
 tensorflow
+pillow
