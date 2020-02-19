@@ -16,9 +16,9 @@ mkdir ~/${your_data_name}
 mkdir ~/VisualSearch/${your_data_name}/FeatureData/
 mkdir ~/VisualSearch/${your_data_name}/TextData/
 ```
-
 2. Download all your dataset inside folder ```~/${your_data_name}```.(storing images and captions data in separate subfolder)
-3. Run following code, replace ```${image_folder}``` ```${output_features_name}``` with your folder image dataset and desired txt file storing extracted features respectively
+3. Saving image caption file with format: [image-name] [text_catption] inside folder ```~/VisualSearch/${data_name}/TextData/${data_name}.caption.txt/```
+4. Run following code, replace ```${image_folder}``` ```${output_features_name}``` with your folder image dataset and desired txt file storing extracted features respectively
 ```
 python resnext_152_extract.py --data_path ${image_folder} -- feature_path ${output_features_name}.txt
 ```
@@ -29,20 +29,11 @@ Run following code, replace ```${output_features_name}``` and ```${data_name}```
 python txt2bin.py --nDims 1000, --inputTextfile ~/${output_features_name},
 --resultDir ~/VisualSearch/${data_name}/FeatureData/mean_resnext101_resnet152
 ```
-
-## Building vocabulary for caption file
-
-Saving image caption file with format: [image-name] [text_catption] inside folder ```~/VisualSearch/${data_name}/TextData/${data_name}.caption.txt/```
-Run following code
-```
-cd ~/W2VV-/w2vvpp
-./do_build_vocab /VisualSearch/${data_name}/TextData/${data_name}.caption.txt
-```
 After previous steps, your dataset folder will have following format
 ```shell
-${subset_name}
+${your_data_name}
 ├── FeatureData
-│   └── ${feature_name}
+│   └── mean_resnext101_resnet152
 │       ├── feature.bin
 │       ├── shape.txt
 │       └── id.txt
@@ -60,4 +51,13 @@ image_id_1#2 sentence_2
 ...
 image_id_n#1 sentence_k
 ...
+```
+
+
+## Building vocabulary for caption file
+
+Run following code
+```
+cd ~/W2VV-/w2vvpp
+./do_build_vocab /VisualSearch/${data_name}/TextData/${data_name}.caption.txt
 ```
