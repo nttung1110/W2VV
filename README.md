@@ -41,8 +41,7 @@ python resnext_152_extract.py --data_path ${image_folder} -- feature_path ${outp
 ## Convert features txt file to bin file format 
 Run following code, replace ```${output_features_name}``` and ```${data_name}```
 ```
-python txt2bin.py --nDims 1000, --inputTextfile ~/W2VV/${output_features_name},
---resultDir ~/VisualSearch/${data_name}/FeatureData/mean_resnext101_resnet152
+python txt2bin.py 1000 ~/W2VV/${output_features_name} 0 ~/VisualSearch/${data_name}/FeatureData/mean_resnext101_resnet152
 ```
 After previous steps, your dataset folder will have following format
 ```shell
