@@ -27,6 +27,7 @@ pip install -r ~/W2VV/w2vvpp/requirements.txt
 1.Run following code, replace ${your_data_name} variable by your own data name
 ```
 mkdir ~/${your_data_name}   
+mkdir ~/VisualSearch/${your_data_name}/
 mkdir ~/VisualSearch/${your_data_name}/FeatureData/
 mkdir ~/VisualSearch/${your_data_name}/TextData/
 ```
