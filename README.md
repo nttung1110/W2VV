@@ -1,5 +1,5 @@
 # Usage
-This repo is inherited from https://github.com/li-xirong/w2vvpp
+This repo is inherited from https://github.com/li-xirong/w2vvpp and https://github.com/danieljf24/dual_encoding
 ## Requirements
 * Ubuntu 16.04
 * cuda 10
