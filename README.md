@@ -1,5 +1,5 @@
 # Usage
-
+This repo is inherited from https://github.com/li-xirong/w2vvpp
 ## Requirements
 * Ubuntu 16.04
 * cuda 10
