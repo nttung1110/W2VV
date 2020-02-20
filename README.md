@@ -31,8 +31,8 @@ mkdir ~/VisualSearch/${your_data_name}/
 mkdir ~/VisualSearch/${your_data_name}/FeatureData/
 mkdir ~/VisualSearch/${your_data_name}/TextData/
 ```
-2. Download all your dataset inside folder ```~/${your_data_name}```.(storing images and captions data in separate subfolder)
-3. Saving image caption file with format: [image-name] [text_catption] inside folder ```~/VisualSearch/${data_name}/TextData/${data_name}.caption.txt/```
+2. Download all your dataset inside folder ```~/W2VV/DATASET/{train/val/test}/${your_data_name}```.(storing images and captions data in separate subfolder)
+3. Copying image caption file with format: [image-name] [text_catption] inside folder ```~/VisualSearch/${data_name}/TextData/${data_name}.caption.txt/```
 4. Run following code, replace ```${image_folder}``` ```${output_features_name}``` with your folder image dataset and desired txt file storing extracted features respectively
 ```
 python resnext_152_extract.py --data_path ${image_folder} -- feature_path ${output_features_name}.txt
